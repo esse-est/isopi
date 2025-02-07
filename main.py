@@ -27,4 +27,4 @@ def pullConfig():
 
 pullConfig()
 print(lintedConfig)
-dc.start(lintedConfig["discordKey"])
+dc.start(lintedConfig)
