@@ -1,5 +1,7 @@
 import discord
 
+
+
 bot = discord.Client()
 
 @bot.event
