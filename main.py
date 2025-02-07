@@ -1,6 +1,6 @@
 import os
 import sys
-import scripts.discord as dc
+import scripts.discordBot as dc
 
 os.chdir(sys.path[0])
 
@@ -27,4 +27,4 @@ def pullConfig():
 
 pullConfig()
 print(lintedConfig)
-dc.botRun(lintedConfig["discordKey"])
+dc.start(lintedConfig["discordKey"])
