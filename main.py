@@ -1,5 +1,6 @@
 import os
 import sys
+import scripts.discord as dc
 
 os.chdir(sys.path[0])
 
@@ -25,5 +26,5 @@ def pullConfig():
             lintedConfig["discordKey"] = kfile.readlines()[0]
 
 pullConfig()
-
 print(lintedConfig)
+dc.botRun(lintedConfig["discordKey"])
