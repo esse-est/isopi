@@ -1,20 +1,16 @@
 # also pulls from "keyfile" firstline if it's present, overrides this.
 discordKey:
 
-# max time in seconds before thermometer makes a gpio call (overriding cache).
-cacheTimeTherm: 5
-
-# max time in seconds before thermometer makes a gpio call (overriding cache). recommend setting higher then therm as the calls require more resources
-cacheTimeHydro: 15
+# max time in seconds before gpio call (overriding cache).
+cacheTime: 30
 
 # per pull request, max amounts of times getting gpio info
-maxAttemptTherm: 2
-maxAttemptHydro: 4
+maxAttemptPull: 4
 
 # runs script in bg vs it eating console. 
 isDaemon: false
 
-# log level 0-7
+# log level 0-7.
 logLevel: 7
 
 # primary data pin
