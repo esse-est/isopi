@@ -44,10 +44,13 @@ def init():
 def logPrint(message:str,logLevel:int):
     if len(lintedConfig) != 0: #sanity check
         if logLevel <= int(lintedConfig["logLevel"]):
+            
+            timeStr=strftime(lintedConfig["timeFormatLogs"], localtime())
+            
             if len(logFile.readlines()) != 1:
-                logFile.write(f"[{strftime(lintedConfig["timeFormatLogs"], localtime())}]: {message} \n")
+                logFile.write(f"[{timeStr}]: {message} \n")
             else:
-                logFile.write(f"[{strftime(lintedConfig["timeFormatLogs"], localtime())}]: {message}")
+                logFile.write(f"[{timeStr}]: {message}")
         if lintedConfig["isDaemon"] == 'false':
             print(message)
 
