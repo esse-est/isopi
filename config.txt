@@ -15,7 +15,7 @@ maxAttemptHydro: 4
 isDaemon: false
 
 # log level 0-7
-logLevel: 6
+logLevel: 7
 
 # primary data pin
 dataPin: 
