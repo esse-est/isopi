@@ -25,7 +25,7 @@ def init():
     #format to int as needed
     
     for i in lintedConfig:
-        if lintedConfig[i].isnumeric():
+        if lintedConfig[i].isnumeric() and not i=="timeFormatLogs":
             lintedConfig[i] = int(lintedConfig[i])
         
     
